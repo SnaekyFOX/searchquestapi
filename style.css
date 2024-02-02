@@ -1,0 +1,15 @@
+/* Dark Mode Stilleri */
+body.dark-mode {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Arama kutusu metin rengi */
+#search-input {
+  color: #000; /* Veya başka bir açık renk */
+}
+
+/* Sonuçlar metin rengi */
+.result-item {
+  color: #000; /* Veya başka bir açık renk */
+}

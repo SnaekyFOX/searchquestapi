@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Quest</title>
+  <link rel="icon" type="image/png" href="https://cdn.glitch.global/aafcc4bf-cbbe-4704-b41b-6467a0ce1cc6/search.png?v=1705865511990">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      transition: background-color 0.5s ease;
+    }
+
+    body.dark-mode {
+      background-color: #333;
+      color: #fff;
+    }
+
+    #header {
+      background-color: #4285f4;
+      color: #ffffff;
+      padding: 20px;
+    }
+
+    #search-container {
+      margin-top: 20px;
+    }
+
+    #search-input {
+      padding: 10px;
+      width: 300px;
+      border-radius: 20px; /* Oval şeklini belirleyen stil */
+      border: 1px solid #ddd; /* Sınır ekleme */
+    }
+
+    #search-button {
+      padding: 10px;
+      cursor: pointer;
+      margin-top: 10px;
+      border-radius: 20px; /* Oval şeklini belirleyen stil */
+      background-color: #4CAF50; /* Yeşil renk */
+      color: white; /* Beyaz renk */
+    }
+
+    #search-image {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      margin: 20px auto;
+      display: block;
+    }
+
+    #results-container {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .result-item {
+      margin-bottom: 10px;
+      border: 1px solid #ddd; /* Sınır ekleme */
+      border-radius: 10px; /* Köşe yuvarlama */
+      padding: 10px; /* İçerikten sınıra olan boşluk */
+      background-color: #fff; /* Arkaplan rengi */
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölgelendirme */
+    }
+
+    #dark-mode-toggle {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #4285f4;
+      color: #fff;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="header">
+  <h1>Search Quest</h1>
+</div>
+
+<div id="search-container">
+  <input type="text" id="search-input" placeholder="Quest'da Ara..." onkeydown="handleKeyPress(event)">
+  <br>
+  <button id="search-button" onclick="search()">Ara</button>
+</div>
+
+<div id="results-container"></div>
+
+<div id="dark-mode-toggle" onclick="toggleDarkMode()">Light Mode</div>
+  <!-- Diğer başlık etiketleri -->
+<script src="script.js" defer></script>
+<link rel="stylesheet" href="style.css">
+
+</body>
+</html>
